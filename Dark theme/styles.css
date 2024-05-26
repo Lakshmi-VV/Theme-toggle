@@ -1,0 +1,142 @@
+/* *{
+    background-color: #edf2fc ; 000106
+    background-color: #212121; fff
+    background-color: #ff4321;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+#icon{
+ cursor: pointer;
+}
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff;
+}
+.main{
+    height: 100vh;
+    background-color:var(--primary-color) ;
+    overflow: hidden;
+}
+.navbar{
+    display: flex;
+    padding: 28px 80px;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: bolder;
+    font-size: 3rem;
+    color: #ff4321;
+}
+a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    position: relative;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    padding: 24px;
+}
+.theme{
+    height: 24px;
+}
+a::before{
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: #ff4321;
+    transition: width 0.4s;
+    bottom: -10px;
+    position: absolute;
+
+}
+a:hover::before{
+    width: 100%;
+}
+a:hover{
+    color: #ff4321;
+}
+.content{
+    width: 50%;
+    padding: 120px 0px;
+    color: var(--secondary-color);
+}
+.content h1{
+    font-size: 4rem;
+}
+.content p{
+    letter-spacing: 1px;
+    text-align: justify;
+    line-height: 30px;
+}
+button{
+    border-radius: 20px;
+    border-color: none;
+    border-style: none;
+    background-color: #ff4321;
+    color: var(--secondary-color);
+    padding:10px 30px;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: letter-spacing 0.4s;
+}
+button:hover{
+    letter-spacing: 2px;
+}
+span{
+    color: #ff4321;
+}
+.page {
+    display: flex;
+    padding: 0px 80px;
+    justify-content: space-between;
+}
+
+
+.overlay{
+    margin-left: 100px;
+    position: relative;
+    width: 50%;
+}
+.girl{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    transition: transform 0.8s;
+}
+.pattern{
+    position: absolute;
+    opacity: 0.2;
+    transition: transform 0.4s;
+}
+.overlay:hover .pattern{
+    transform: translateY(50px);
+    opacity: 0.6;
+    animation: move 0.4s linear forwards;     
+}
+.overlay:hover .girl{
+    transform: translateX(70px);
+    animation: mov 0.4s linear forwards;   
+}
+@keyframes mov{
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes move{
+    100%{
+        transform: translateY(0px);
+    }
+}
